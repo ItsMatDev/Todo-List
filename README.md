@@ -2,6 +2,10 @@ This is a simple Todo List where you can see all your tasks, add some and delete
 
 ## Installation
 
+- Clone this repo :
+  
+git clone {url}
+
 - Install packages :
 
 cd ./front && npm i
@@ -17,3 +21,16 @@ npm run db:migrate
 
 cd ./front && npm run dev
 cd ./back && npm run dev
+
+## Packages : 
+
+- React.Js
+- Express
+- Redux Toolkit
+- Cors
+- Sass
+- Joi
+- dotenv
+- Sequelize
+- mysql2
+- nodemon
