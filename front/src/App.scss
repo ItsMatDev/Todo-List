@@ -1,0 +1,24 @@
+@import "./variable.scss";
+* {
+  font-family: cursive;
+}
+
+body {
+  background: $backgroundColor;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-size: $fontSizeButton;
+  background: $inputColor;
+  color: $fontColor;
+  border: $borderSize $fontColor;
+  border-radius: 10px;
+  padding: $paddingButtonSize;
+  &:disabled {
+    background: $backgroundColor;
+    color: grey;
+    border: $borderSize $borderColor;
+  }
+}

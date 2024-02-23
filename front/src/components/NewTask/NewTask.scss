@@ -1,0 +1,31 @@
+@import "../../variable.scss";
+
+.newTaskForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  border: $borderSize $borderColor;
+  border-radius: 10px;
+  padding: $paddingSize;
+  color: $fontColor;
+  label {
+    font-size: $fontSizeTasks;
+    font-weight: 100;
+  }
+  input {
+    width: 50vw;
+    height: 3rem;
+    background: $inputColor;
+    border-radius: 10px;
+    color: $fontColor;
+    font-size: 1.5rem;
+    margin-top: 1vh;
+    padding-left: 0.5rem;
+  }
+  button {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.8rem;
+  }
+}
