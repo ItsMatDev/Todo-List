@@ -2,6 +2,10 @@ This is a simple Todo List where you can see all your tasks, add some and delete
 
 ## Installation
 
+- Clone this repo :
+  
+git clone {url}
+
 - Install packages :
 
 cd ./front && npm i
