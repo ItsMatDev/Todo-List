@@ -68,7 +68,6 @@ const todoSlice = createSlice({
       })
       .addCase(endTaskAsync.fulfilled, (state, action) => {
         state.loading = false;
-        console.log(action.payload.id);
         state.tasks = state.tasks.filter((task) => task.id !== action.payload.id);
       });
   },
