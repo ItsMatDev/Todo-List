@@ -21,3 +21,16 @@ npm run db:migrate
 
 cd ./front && npm run dev
 cd ./back && npm run dev
+
+## Packages : 
+
+- React.Js
+- Express
+- Redux Toolkit
+- Cors
+- Sass
+- Joi
+- dotenv
+- Sequelize
+- mysql2
+- nodemon
