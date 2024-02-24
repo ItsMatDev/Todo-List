@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { endTaskAsync, fetchTasks } from "../../redux";
+import { useEffect } from "react";
 import "./TasksList.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { endTaskAsync, fetchTasks } from "../../redux/tasks/thunks";
 
 function TasksList() {
   const tasks = useSelector((state) => state.todo.tasks);
@@ -11,7 +11,7 @@ function TasksList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTasks());
+    dispatch(fetchTasks);
   }, [dispatch]);
 
   return (
