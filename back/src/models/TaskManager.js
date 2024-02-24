@@ -1,4 +1,4 @@
-import Task from "./Task";
+import Task from "./Task.js";
 
 const getAllTasks = async () => {
   try {
@@ -37,4 +37,4 @@ const deleteTask = async (taskId) => {
   }
 };
 
-export default { getAllTasks, createTask, deleteTask };
+export { getAllTasks, createTask, deleteTask };
