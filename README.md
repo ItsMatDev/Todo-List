@@ -4,23 +4,27 @@ This is a simple Todo List where you can see all your tasks, add some and delete
 
 - Clone this repo :
   
-git clone {url}
+      git clone {url}
 
 - Install packages :
 
-cd ./front && npm i
-cd ./back && npm i
+       cd ./front && npm i  
+       cd ./back && npm i  
 
 - Create .env and modify it using .env.sample
 
 - Create database : 
 
-cd ./back && npm run db:migrate
+        cd ./back
+        npm run db:migrate
 
 - Run App :
 
-cd ./front && npm run dev
-cd ./back && npm run dev
+        cd ./front
+        npm run dev
+      
+        cd ./back
+        npm run dev  
 
 ## Packages : 
 
