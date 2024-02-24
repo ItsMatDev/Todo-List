@@ -14,11 +14,11 @@ const migrate = async () => {
       multipleStatements: true,
     });
 
-    await database.query(`drop database if exists ${DB_NAME}`);
+    await database.query(`DROP DATABASE IF EXISTS ${DB_NAME}`);
 
-    await database.query(`create database ${DB_NAME}`);
+    await database.query(`CREATE DATABASE ${DB_NAME}`);
 
-    await database.query(`use ${DB_NAME}`);
+    await database.query(`USE ${DB_NAME}`);
 
     database.end();
 

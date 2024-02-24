@@ -3,7 +3,7 @@ import "./NewTask.scss";
 import { useState } from "react";
 import { addTaskAsync } from "../../redux/tasks/thunks";
 import TaskInput from "../TaskInput/TaskInput";
-import TaskButton from "../TaskButton/TaskButton";
+import Button from "../Button/Button";
 
 function NewTask() {
   const [text, setText] = useState("");
@@ -24,7 +24,7 @@ function NewTask() {
   return (
     <form className="newTaskForm" onSubmit={handleSubmit}>
       <TaskInput value={text} onChange={handleChange} maxLength={50} />
-      <TaskButton disabled={isButtonDisabled} />
+      <Button type="submit" disabled={isButtonDisabled} onClick={handleSubmit} text="Ajouter" />
     </form>
   );
 }

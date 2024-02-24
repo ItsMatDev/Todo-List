@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./TasksList.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { endTaskAsync, fetchTasks } from "../../redux/tasks/thunks";
+import TaskItem from "../TaskItem/TaskItem";
 
 function TasksList() {
   const tasks = useSelector((state) => state.todo.tasks);
@@ -14,23 +15,20 @@ function TasksList() {
     dispatch(fetchTasks);
   }, [dispatch]);
 
+  const handleTaskCompletion = (taskId) => {
+    dispatch(endTaskAsync(taskId));
+  };
+
   return (
     tasks.length > 0 && (
       <section className="tasksList">
         <h2>Liste des taches :</h2>
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>Error: {error}</div>
-        ) : (
+        {loading && <p>Loading...</p>}
+        {!loading && error && <p>Error: {error}</p>}
+        {!loading && !error && (
           <ul>
             {tasks.map((task) => (
-              <li key={task.id}>
-                - {task.text}
-                <button type="button" onClick={() => dispatch(endTaskAsync(task.id))}>
-                  Terminer
-                </button>
-              </li>
+              <TaskItem key={task.id} task={task} onComplete={handleTaskCompletion} />
             ))}
           </ul>
         )}

@@ -15,7 +15,7 @@ export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
 });
 
 export const addTaskAsync = createAsyncThunk("tasks/addTask", async (taskText) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/task`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,7 +30,7 @@ export const addTaskAsync = createAsyncThunk("tasks/addTask", async (taskText) =
 });
 
 export const endTaskAsync = createAsyncThunk("tasks/endTask", async (taskId) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/task/${taskId}`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/tasks/${taskId}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
