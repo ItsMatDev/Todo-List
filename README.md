@@ -15,7 +15,7 @@ cd ./back && npm i
 
 - Create database : 
 
-npm run db:migrate
+cd ./back && npm run db:migrate
 
 - Run App :
 
