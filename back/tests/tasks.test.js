@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../app.js");
 
-describe("Task Routes", () => {
+describe("Testing tasks routes", () => {
   it("GET /tasks should return all tasks", async () => {
     const res = await request(app).get("/tasks");
     expect(res.statusCode).toEqual(200);
@@ -20,6 +20,9 @@ describe("Task Routes", () => {
     expect(res.statusCode).toEqual(201);
     expect(res.body).toHaveProperty("id");
     expect(res.body.text).toEqual(newTask.text);
+
+    const taskId = res.body.id;
+    await request(app).delete(`/tasks/${taskId}`);
   });
 
   it("DELETE /tasks/:id should delete the new task created", async () => {
