@@ -25,3 +25,22 @@ $fontSizeButtonDesktop: 2rem;
     border: $borderSize $borderColor;
   }
 }
+
+@mixin baseProperties {
+  border: $borderSize $borderColor;
+  border-radius: 10px;
+  width: 85vw;
+  padding: $paddingSize;
+  color: $fontColor;
+  opacity: 0;
+  animation: fadeInAnimation 0.1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

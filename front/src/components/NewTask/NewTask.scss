@@ -4,11 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 85vw;
-  border: $borderSize $borderColor;
-  border-radius: 10px;
-  padding: $paddingSize;
-  color: $fontColor;
+  @include baseProperties;
   label {
     font-size: $fontSizeTitle;
     font-weight: 100;

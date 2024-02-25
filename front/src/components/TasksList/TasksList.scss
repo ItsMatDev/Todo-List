@@ -1,13 +1,9 @@
 @import "../../variable.scss";
 
 .tasksList {
-  border: $borderSize $borderColor;
-  border-radius: 10px;
-  width: 85vw;
-  padding: $paddingSize;
   margin-top: 2vh;
   font-size: $fontSizeTasks;
-  color: $fontColor;
+  @include baseProperties;
   h2 {
     margin: 0 0 0 1rem;
     font-size: $fontSizeTitle;
@@ -23,6 +19,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      opacity: 0;
+      animation: fadeInAnimation 0.5s ease-in forwards;
       button {
         @include Button;
         margin-left: 1vw;
