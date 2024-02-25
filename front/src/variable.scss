@@ -24,11 +24,13 @@ $fontSizeButtonDesktop: 2rem;
     color: grey;
     border: $borderSize $borderColor;
   }
-  &:hover,
-  &:focus {
-    background-color: $fontColor;
-    border-color: $borderColor;
-    color: $borderColor;
+  &:not(:disabled) {
+    &:hover,
+    &:focus {
+      background-color: $fontColor;
+      border-color: $borderColor;
+      color: $borderColor;
+    }
   }
 }
 
