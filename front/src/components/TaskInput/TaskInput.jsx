@@ -11,7 +11,14 @@ function TaskInput({ value, onChange, maxLength, remainingChars, setRemainingCha
   return (
     <fieldset className="taskInput">
       <label htmlFor="newTask">Nouvelle Tâche :</label>
-      <input id="newTask" type="text" value={value} onChange={handleChange} maxLength={maxLength} />
+      <input
+        id="newTask"
+        type="text"
+        value={value}
+        onChange={handleChange}
+        maxLength={maxLength}
+        placeholder="Entrez votre tâche ici..."
+      />
       <p>{remainingChars} caractères restants</p>
     </fieldset>
   );
