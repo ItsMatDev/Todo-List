@@ -7,11 +7,9 @@ function TaskInput({ value, onChange, maxLength, remainingChars, setRemainingCha
     onChange(newValue);
     setRemainingChars(maxLength - newValue.trim().length);
   };
-  const handleSubmit = () => {
-    setRemainingChars(maxLength);
-  };
+
   return (
-    <fieldset className="taskInput" onSubmit={handleSubmit}>
+    <fieldset className="taskInput">
       <label htmlFor="newTask">Nouvelle Tâche :</label>
       <input id="newTask" type="text" value={value} onChange={handleChange} maxLength={maxLength} />
       <p>{remainingChars} caractères restants</p>
