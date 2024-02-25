@@ -38,3 +38,5 @@ This is a simple Todo List where you can see all your tasks, add some and delete
 - Sequelize
 - mysql2
 - nodemon
+- jest
+- supertest
