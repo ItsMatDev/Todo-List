@@ -23,7 +23,6 @@ const todoSlice = createSlice({
       })
       .addCase(addTaskAsync.fulfilled, (state, action) => {
         state.loading = false;
-
         state.tasks.push(action.payload);
       })
       .addCase(endTaskAsync.fulfilled, (state, action) => {

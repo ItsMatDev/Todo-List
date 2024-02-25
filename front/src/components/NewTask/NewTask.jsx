@@ -6,7 +6,10 @@ import TaskInput from "../TaskInput/TaskInput";
 import Button from "../Button/Button";
 
 function NewTask() {
+  const maxLength = 50;
   const [text, setText] = useState("");
+  const [remainingChars, setRemainingChars] = useState(maxLength);
+
   const dispatch = useDispatch();
 
   const handleChange = (newValue) => {
@@ -17,14 +20,21 @@ function NewTask() {
     event.preventDefault();
     dispatch(addTaskAsync(text));
     setText("");
+    setRemainingChars(maxLength);
   };
 
   const isButtonDisabled = !text.trim() || text.length > 50;
 
   return (
     <form className="newTaskForm" onSubmit={handleSubmit}>
-      <TaskInput value={text} onChange={handleChange} maxLength={50} />
-      <Button type="submit" disabled={isButtonDisabled} onClick={handleSubmit} text="Ajouter" />
+      <TaskInput
+        value={text}
+        onChange={handleChange}
+        maxLength={maxLength}
+        remainingChars={remainingChars}
+        setRemainingChars={setRemainingChars}
+      />
+      <Button type="submit" disabled={isButtonDisabled} text="Ajouter" />
     </form>
   );
 }

@@ -4,13 +4,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80vw;
+  width: 85vw;
   border: $borderSize $borderColor;
   border-radius: 10px;
   padding: $paddingSize;
   color: $fontColor;
   label {
-    font-size: $fontSizeTasks;
+    font-size: $fontSizeTitle;
     font-weight: 100;
   }
   input {
@@ -25,6 +25,26 @@
   }
   p {
     font-size: 1rem;
-    margin-left: 1rem;
+    margin: 1rem 0 0 1rem;
+  }
+  button {
+    @include Button;
+    margin-top: 1vh;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .newTaskForm {
+    label {
+      font-size: $fontSizeTitleDesktop;
+    }
+    p {
+      font-size: 0.8rem;
+      margin: 0.5rem 0 0 1.5rem;
+    }
+    button {
+      font-size: $fontSizeButtonDesktop;
+      margin-top: 5vh;
+    }
   }
 }

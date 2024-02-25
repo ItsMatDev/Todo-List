@@ -3,29 +3,49 @@
 .tasksList {
   border: $borderSize $borderColor;
   border-radius: 10px;
-  width: 80vw;
+  width: 85vw;
   padding: $paddingSize;
-  margin-top: 5vh;
+  margin-top: 2vh;
   font-size: $fontSizeTasks;
   color: $fontColor;
   h2 {
-    margin: 0;
-    font-size: $fontSizeTasks;
+    margin: 0 0 0 1rem;
+    font-size: $fontSizeTitle;
     font-weight: 100;
   }
   ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 1.5rem;
     padding: 0;
     li {
       margin: 2vh 0;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       button {
-        margin-left: 2vw;
+        @include Button;
+        margin-left: 1vw;
         font-size: $fontSizeButton;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .tasksList {
+    h2 {
+      font-size: $fontSizeTitleDesktop;
+      margin: 0 0 0 9rem;
+    }
+    ul {
+      margin: 0 0 0 12rem;
+      li {
+        font-size: $fontSizeTasksDesktop;
+        button {
+          font-size: $fontSizeButtonDesktop;
+          margin-right: 6vw;
+        }
       }
     }
   }

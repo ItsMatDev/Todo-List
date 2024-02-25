@@ -5,5 +5,23 @@ $borderSize: 1px solid;
 $borderColor: #2870bd;
 $paddingSize: 1rem;
 $paddingButtonSize: 0.5rem 1rem;
-$fontSizeTasks: 2rem;
+$fontSizeTitle: 1.9rem;
+$fontSizeTasks: 1.5rem;
 $fontSizeButton: 1rem;
+$fontSizeTitleDesktop: 3rem;
+$fontSizeTasksDesktop: 2.5rem;
+$fontSizeButtonDesktop: 2rem;
+
+@mixin Button {
+  font-size: $fontSizeButton;
+  background: $inputColor;
+  color: $fontColor;
+  border: $borderSize $fontColor;
+  border-radius: 10px;
+  padding: $paddingButtonSize;
+  &:disabled {
+    background: $backgroundColor;
+    color: grey;
+    border: $borderSize $borderColor;
+  }
+}

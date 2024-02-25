@@ -5,12 +5,7 @@ function TaskItem({ task, onComplete }) {
   return (
     <li>
       - {task.text}
-      <Button
-        type="button"
-        disabled={false}
-        onClick={() => onComplete(task.id)}
-        text="Terminer"
-      />
+      <Button type="button" disabled={false} onClick={() => onComplete(task.id)} text="Terminer" />
     </li>
   );
 }

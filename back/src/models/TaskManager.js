@@ -1,4 +1,4 @@
-import Task from "./Task.js";
+import Task from "../../database/schema.js";
 
 const getAllTasks = async () => {
   try {
