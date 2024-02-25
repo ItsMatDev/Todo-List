@@ -1,7 +1,7 @@
-import { Router } from "express";
+const { Router } = require("express");
 
-import taskController from "../controllers/taskController.js";
-import validateTask from "../middlewares/taskValidationSchema.js";
+const taskController = require("../controllers/taskController.js");
+const validateTask = require("../middlewares/taskValidationSchema.js");
 
 const router = Router();
 
@@ -9,4 +9,4 @@ router.get("/tasks", taskController.getAll);
 router.post("/tasks", validateTask, taskController.createOne);
 router.delete("/tasks/:id", taskController.deleteOne);
 
-export default router;
+module.exports = router;

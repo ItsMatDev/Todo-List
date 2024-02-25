@@ -1,4 +1,4 @@
-import Joi from "joi";
+const Joi = require("joi");
 
 const taskSchema = Joi.object({ text: Joi.string().min(1).max(50).trim().required() });
 
@@ -10,4 +10,4 @@ const taskValidationSchema = (req, res, next) => {
   next();
 };
 
-export default taskValidationSchema;
+module.exports = taskValidationSchema;

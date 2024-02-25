@@ -1,5 +1,5 @@
-import { DataTypes } from "sequelize";
-import db from "./database.js";
+const { DataTypes } = require("sequelize");
+const db = require("./database.js");
 
 const Task = db.define("task", {
   id: {
@@ -14,4 +14,4 @@ const Task = db.define("task", {
   },
 });
 
-export default Task;
+module.exports = Task;

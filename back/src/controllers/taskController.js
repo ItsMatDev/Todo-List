@@ -1,4 +1,4 @@
-import { getAllTasks, deleteTask, createTask } from "../models/TaskManager.js";
+const { getAllTasks, deleteTask, createTask } = require("../models/TaskManager.js");
 
 const getAll = async (req, res) => {
   try {
@@ -32,4 +32,4 @@ const deleteOne = async (req, res) => {
   }
 };
 
-export default { getAll, createOne, deleteOne };
+module.exports = { getAll, createOne, deleteOne };

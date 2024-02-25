@@ -1,8 +1,8 @@
-import express from "express";
-import dotenv from "dotenv";
-import routes from "./src/router/router.js";
-import Db from "./database/database.js";
-import cors from "cors";
+const express = require("express");
+const dotenv = require("dotenv");
+const routes = require("./src/router/router.js");
+const Db = require("./database/database.js");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -25,3 +25,5 @@ Db.sync()
   .catch((err) => () => console.info(err));
 
 app.listen(port, () => console.info(`Server is listening on port ${port}`));
+
+module.exports = app;

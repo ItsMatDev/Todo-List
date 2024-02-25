@@ -1,4 +1,4 @@
-import Task from "../../database/schema.js";
+const Task = require("../../database/schema.js");
 
 const getAllTasks = async () => {
   try {
@@ -37,4 +37,4 @@ const deleteTask = async (taskId) => {
   }
 };
 
-export { getAllTasks, createTask, deleteTask };
+module.exports = { getAllTasks, createTask, deleteTask };
