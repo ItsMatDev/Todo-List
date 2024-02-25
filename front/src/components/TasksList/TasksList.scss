@@ -21,6 +21,10 @@
       justify-content: space-between;
       opacity: 0;
       animation: fadeInAnimation 0.5s ease-in forwards;
+      &:hover {
+        text-shadow: 0px 0px 2px $fontColor;
+        color: $borderColor;
+      }
       button {
         @include Button;
         margin-left: 1vw;

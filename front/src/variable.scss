@@ -24,6 +24,12 @@ $fontSizeButtonDesktop: 2rem;
     color: grey;
     border: $borderSize $borderColor;
   }
+  &:hover,
+  &:focus {
+    background-color: $fontColor;
+    border-color: $borderColor;
+    color: $borderColor;
+  }
 }
 
 @mixin baseProperties {
@@ -32,8 +38,12 @@ $fontSizeButtonDesktop: 2rem;
   width: 85vw;
   padding: $paddingSize;
   color: $fontColor;
+  box-shadow: 0px 0px 10px $borderColor;
   opacity: 0;
   animation: fadeInAnimation 0.1s ease-in forwards;
+  &:hover {
+    border-color: #c2e6ff;
+  }
 }
 
 @keyframes fadeInAnimation {

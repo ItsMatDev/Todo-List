@@ -6,3 +6,10 @@
   opacity: 0;
   animation: fadeInAnimation 0.5s ease-in forwards;
 }
+
+@media screen and (min-width: 800px) {
+  .mainTitle {
+    font-size: 4rem;
+    margin-top: 1vh;
+  }
+}
