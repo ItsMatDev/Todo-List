@@ -34,7 +34,7 @@ function NewTask() {
         remainingChars={remainingChars}
         setRemainingChars={setRemainingChars}
       />
-      <Button type="submit" disabled={isButtonDisabled} text="Ajouter" />
+      <Button type="submit" disabled={isButtonDisabled} onClick={() => {}} text="Ajouter" />
     </form>
   );
 }

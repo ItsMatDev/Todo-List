@@ -35,6 +35,17 @@
 @media screen and (min-width: 600px) {
   .tasksList {
     h2 {
+      margin: 0 0 0 2rem;
+    }
+    ul {
+      margin: 0 0 0 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .tasksList {
+    h2 {
       font-size: $fontSizeTitleDesktop;
       margin: 0 0 0 9rem;
     }

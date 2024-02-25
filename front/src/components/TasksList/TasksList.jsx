@@ -5,16 +5,14 @@ import { endTaskAsync, fetchTasks } from "../../redux/tasks/thunks";
 import TaskItem from "../TaskItem/TaskItem";
 
 function TasksList() {
-  const { tasks, loading, error } = useSelector((state) => ({
-    tasks: state.todo.tasks,
-    loading: state.todo.loading,
-    error: state.todo.error,
-  }));
+  const tasks = useSelector((state) => state.todo.tasks);
+  const loading = useSelector((state) => state.todo.loading);
+  const error = useSelector((state) => state.todo.error);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTasks);
+    dispatch(fetchTasks());
   }, [dispatch]);
 
   const handleTaskCompletion = (taskId) => {
